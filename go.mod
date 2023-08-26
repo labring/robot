@@ -1,4 +1,4 @@
-module github.com/labring/gh-robot
+module github.com/labring/robot
 
 go 1.20
 

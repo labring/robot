@@ -19,8 +19,8 @@ package gh
 import (
 	"fmt"
 	"github.com/cuisongliu/logger"
-	"github.com/labring/gh-robot/pkg/types"
-	"github.com/labring/gh-robot/pkg/utils"
+	"github.com/labring/robot/pkg/types"
+	"github.com/labring/robot/pkg/utils"
 	"math/rand"
 	"strings"
 	"time"

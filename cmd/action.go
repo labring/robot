@@ -6,10 +6,10 @@ package cmd
 import (
 	"fmt"
 	"github.com/cuisongliu/logger"
-	"github.com/labring/gh-robot/pkg/action"
-	"github.com/labring/gh-robot/pkg/setup"
-	"github.com/labring/gh-robot/pkg/types"
-	"github.com/labring/gh-robot/pkg/utils"
+	"github.com/labring/robot/pkg/action"
+	"github.com/labring/robot/pkg/setup"
+	"github.com/labring/robot/pkg/types"
+	"github.com/labring/robot/pkg/utils"
 	"os"
 
 	"github.com/spf13/cobra"

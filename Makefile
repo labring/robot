@@ -1,4 +1,4 @@
 install:
-	go build -o gh-robot -v
-	sudo mv gh-robot /usr/bin/
+	go build -o robot -v
+	sudo mv robot /usr/bin/
 

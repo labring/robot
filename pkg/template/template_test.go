@@ -17,7 +17,7 @@ package template
 import (
 	"bytes"
 	"fmt"
-	"github.com/labring/gh-robot/pkg/types"
+	"github.com/labring/robot/pkg/types"
 	"testing"
 )
 

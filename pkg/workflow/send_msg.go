@@ -18,9 +18,9 @@ package workflow
 
 import (
 	"bytes"
-	"github.com/labring/gh-robot/pkg/template"
-	"github.com/labring/gh-robot/pkg/types"
-	"github.com/labring/gh-robot/pkg/utils"
+	"github.com/labring/robot/pkg/template"
+	"github.com/labring/robot/pkg/types"
+	"github.com/labring/robot/pkg/utils"
 	"github.com/pkg/errors"
 )
 

@@ -17,7 +17,7 @@ limitations under the License.
 package bot
 
 import (
-	"github.com/labring/gh-robot/pkg/types"
+	"github.com/labring/robot/pkg/types"
 	"strings"
 )
 

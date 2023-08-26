@@ -21,7 +21,7 @@ jobs:
           make install
       - if: ${{ (github.event_name != 'push') }}
         run: |
-          gh-robot action
+          robot action
         env:
           SEALOS_TYPE: "issue_comment"
           SEALOS_FILENAME: "templates/template.md"
@@ -32,7 +32,7 @@ jobs:
           echo "somethings.....default" >> templates/template.md
       - if: ${{ (github.event_name != 'push') }}
         run: |
-          gh-robot action
+          robot action
         env:
           SEALOS_TYPE: "issue_comment"
           SEALOS_FILENAME: "templates/template.md"

@@ -3,18 +3,18 @@ description: "Add some robot command for sealos"
 author: "cuisongliu"
 inputs:
   version:
-    description: 'version of gh-robot'
+    description: 'version of robot'
     required: true
     default: 'v0.0.5'
 runs:
   using: "composite"
   steps:
   - run: |
-      sudo wget -q https://github.com/labring/gh-robot/releases/download/${GH_REBOT_VERSION}/gh-robot_${GH_REBOT_VERSION#v}_linux_amd64.tar.gz
-      sudo tar -zxf gh-robot_${GH_REBOT_VERSION#v}_linux_amd64.tar.gz gh-robot &&  chmod +x gh-robot && sudo mv gh-robot /usr/bin/gh-robot
-      gh-robot version
-      sudo rm -rf gh-robot_${GH_REBOT_VERSION#v}_linux_amd64.tar.gz
-      gh-robot action
+      sudo wget -q https://github.com/labring/robot/releases/download/${GH_REBOT_VERSION}/robot_${GH_REBOT_VERSION#v}_linux_amd64.tar.gz
+      sudo tar -zxf robot_${GH_REBOT_VERSION#v}_linux_amd64.tar.gz robot &&  chmod +x robot && sudo mv robot /usr/bin/robot
+      robot version
+      sudo rm -rf robot_${GH_REBOT_VERSION#v}_linux_amd64.tar.gz
+      robot action
     shell: bash
     env:
       GH_REBOT_VERSION: ${{ inputs.version }}
