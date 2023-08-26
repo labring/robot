@@ -36,7 +36,7 @@ jobs:
           password: ${{ secrets.GH_RELEASE_PAT }}
       - name: Copy file
         run: |
-          cp dist/gh-robot_linux_amd64_v1/gh-robot  gh-robot
+          cp dist/robot_linux_amd64_v1/robot  robot
       - name: Expose git commit data
         uses: rlespinasse/git-commit-data-action@v1
       - name: build (and publish) main image
@@ -44,9 +44,9 @@ jobs:
         run: |
           docker buildx build \
           --platform linux/amd64 \
-          --label "org.opencontainers.image.source=https://github.com/${{ github.repository_owner }}/gh-robot" \
+          --label "org.opencontainers.image.source=https://github.com/${{ github.repository_owner }}/robot" \
           --push \
-          -t ghcr.io/${{ github.repository_owner }}/gh-robot:${{ env.GIT_COMMIT_SHORT_SHA }} \
+          -t ghcr.io/${{ github.repository_owner }}/robot:${{ env.GIT_COMMIT_SHORT_SHA }} \
           -f Dockerfile \
           .
       - name: build  main image
@@ -54,7 +54,7 @@ jobs:
         run: |
           docker buildx build \
           --platform linux/amd64 \
-          --label "org.opencontainers.image.source=https://github.com/${{ github.repository_owner }}/gh-robot" \
-          -t ghcr.io/${{ github.repository_owner }}/gh-robot:${{ env.GIT_COMMIT_SHORT_SHA }} \
+          --label "org.opencontainers.image.source=https://github.com/${{ github.repository_owner }}/robot" \
+          -t ghcr.io/${{ github.repository_owner }}/robot:${{ env.GIT_COMMIT_SHORT_SHA }} \
           -f Dockerfile \
           .

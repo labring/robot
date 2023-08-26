@@ -13,7 +13,7 @@ jobs:
       - name: Checkout the latest code
         uses: actions/checkout@v3
       - name: Gh Rebot for Sealos
-        uses: labring/gh-robot@v0.0.6
+        uses: labring/robot@v0.0.6
         with:
           version: v0.0.6
         env:

@@ -18,7 +18,7 @@ package cmd
 
 import (
 	"fmt"
-	"github.com/labring/gh-robot/pkg/version"
+	"github.com/labring/robot/pkg/version"
 	"github.com/pkg/errors"
 	"github.com/spf13/cobra"
 	"k8s.io/apimachinery/pkg/util/json"

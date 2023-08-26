@@ -18,7 +18,7 @@ package gh
 
 import (
 	"fmt"
-	"github.com/labring/gh-robot/pkg/utils"
+	"github.com/labring/robot/pkg/utils"
 	"github.com/pkg/errors"
 )
 

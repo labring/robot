@@ -19,8 +19,8 @@ package action
 import (
 	"fmt"
 	"github.com/cuisongliu/logger"
-	"github.com/labring/gh-robot/pkg/types"
-	"github.com/labring/gh-robot/pkg/workflow"
+	"github.com/labring/robot/pkg/types"
+	"github.com/labring/robot/pkg/workflow"
 	"k8s.io/apimachinery/pkg/apis/meta/v1/unstructured"
 	"os"
 	"strings"
