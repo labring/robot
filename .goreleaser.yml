@@ -20,54 +20,6 @@ builds:
       - -X github.com/labring/robot/pkg/version.buildDate={{.Date}}
 
 
-dockers:
-  - use: buildx
-    ids:
-      - robot
-    goos: linux
-    goarch: amd64
-    image_templates:
-      - ghcr.io/{{ .Env.USERNAME }}/robot:{{ .Tag }}-amd64
-    dockerfile: Dockerfile
-    build_flag_templates:
-      - --pull
-      - --platform=linux/amd64
-      - --build-arg=TARGETARCH=amd64
-      - --label=io.sealos.image.created={{.Date}}
-      - --label=io.sealos.image.title=robot
-      - --label=io.sealos.image.revision={{.ShortCommit}}
-      - --label=io.sealos.image.version={{.Tag }}
-      - --label=io.sealos.image.auth={{ .Env.USERNAME }}
-      - --label=org.opencontainers.image.description="Automatically github bot for Sealos using comment and cmd"
-      - --label=org.opencontainers.image.licenses="Apache 2.0"
-      - --label=org.opencontainers.image.source="https://github.com/labring/robot"
-  - use: buildx
-    ids:
-      - robot
-    goos: linux
-    goarch: arm64
-    image_templates:
-      - ghcr.io/{{ .Env.USERNAME }}/robot:{{ .Tag }}-arm64
-    dockerfile: Dockerfile
-    build_flag_templates:
-      - --pull
-      - --platform=linux/arm64
-      - --build-arg=TARGETARCH=arm64
-      - --label=io.sealos.image.created={{.Date}}
-      - --label=io.sealos.image.title=robot
-      - --label=io.sealos.image.revision={{.ShortCommit}}
-      - --label=io.sealos.image.version={{.Tag }}
-      - --label=io.sealos.image.auth={{ .Env.USERNAME }}
-      - --label=org.opencontainers.image.description="Automatically github bot for Sealos using comment and cmd"
-      - --label=org.opencontainers.image.licenses="Apache 2.0"
-      - --label=org.opencontainers.image.source="https://github.com/labring/robot"
-docker_manifests:
-  - name_template: ghcr.io/{{ .Env.USERNAME }}/robot:{{ .Tag }}
-    image_templates:
-      - ghcr.io/{{ .Env.USERNAME }}/robot:{{ .Tag }}-amd64
-      - ghcr.io/{{ .Env.USERNAME }}/robot:{{ .Tag }}-arm64
-
-
 #archives:
 #  - replacements:
 #      darwin: darwin
