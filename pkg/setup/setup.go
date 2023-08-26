@@ -18,7 +18,7 @@ package setup
 
 import (
 	"github.com/cuisongliu/logger"
-	"github.com/labring/gh-rebot/pkg/types"
+	"github.com/labring/gh-robot/pkg/types"
 	"os"
 )
 

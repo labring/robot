@@ -1,10 +1,10 @@
-# gh-rebot 项目说明文档
+# gh-robot 项目说明文档
 
-gh-rebot 是一个针对 sealos 项目的 GitHub rebot，用于自动执行一些常见操作，如发布新版本等。本文档将介绍该 rebot 的配置文件，并提供相应的使用指南。
+gh-robot 是一个针对 sealos 项目的 GitHub robot，用于自动执行一些常见操作，如发布新版本等。本文档将介绍该 robot 的配置文件，并提供相应的使用指南。
 
 ## 配置文件
 
-下面是 gh-rebot 项目的配置文件：
+下面是 gh-robot 项目的配置文件：
 
 ```yaml
 version: v1
@@ -69,7 +69,7 @@ message:
 
 ## 使用文档
 
-使用 gh-rebot 时，需要遵循以下步骤：
+使用 gh-robot 时，需要遵循以下步骤：
 
 1. 将配置文件添加到项目的`.github`目录` gh-bot.yml `文件。
 2. 确保配置文件中的用户名、仓库名称等信息与实际情况相符。
@@ -91,7 +91,7 @@ message:
 
 ### 错误处理
 
-根据配置文件中的消息模板，gh-rebot 会在执行操作过程中遇到错误时返回相应的提示消息。例如：
+根据配置文件中的消息模板，gh-robot 会在执行操作过程中遇到错误时返回相应的提示消息。例如：
 
 - 格式错误：‼️ 机器人说：操作格式错误，请检查此操作的格式。
 - 权限错误：‼️ 机器人说：操作无权限触发。
@@ -104,7 +104,7 @@ message:
 
 ```yaml
 - name: Gh Rebot for Sealos
-  uses: labring/gh-rebot@v0.0.6-rc6
+  uses: labring/gh-robot@v0.0.6-rc6
   with:
     version: v0.0.6-rc6
   env:

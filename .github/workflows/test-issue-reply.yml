@@ -19,7 +19,7 @@ jobs:
           make install
       - if: startswith(github.event.comment.body, '/comment')
         run: |
-          gh-rebot action
+          gh-robot action
         env:
           SEALOS_TYPE: "issue_comment"
 #          SEALOS_FILENAME: "templates/template.md"
@@ -30,14 +30,14 @@ jobs:
         run: |
           echo "somethings.....default" >> templates/template.md
       - run: |
-          gh-rebot action
+          gh-robot action
         if: startswith(github.event.comment.body, '/comment')
         env:
           SEALOS_TYPE: "issue_comment"
           SEALOS_FILENAME: "templates/template.md"
           GH_TOKEN: "${{ secrets.GH_PAT }}"
       - run: |
-          gh-rebot action
+          gh-robot action
         if: startswith(github.event.comment.body, '/reply')
         env:
           SEALOS_TYPE: "issue_comment"

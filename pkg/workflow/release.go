@@ -19,9 +19,9 @@ package workflow
 import (
 	"fmt"
 	"github.com/cuisongliu/logger"
-	"github.com/labring/gh-rebot/pkg/gh"
-	"github.com/labring/gh-rebot/pkg/types"
-	"github.com/labring/gh-rebot/pkg/utils"
+	"github.com/labring/gh-robot/pkg/gh"
+	"github.com/labring/gh-robot/pkg/types"
+	"github.com/labring/gh-robot/pkg/utils"
 	"strings"
 )
 

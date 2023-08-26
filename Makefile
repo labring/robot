@@ -1,4 +1,4 @@
 install:
-	go build -o gh-rebot -v
-	sudo mv gh-rebot /usr/bin/
+	go build -o gh-robot -v
+	sudo mv gh-robot /usr/bin/
 

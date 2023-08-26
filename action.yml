@@ -1,20 +1,20 @@
 name: "Gh Rebot for Sealos"
-description: "Add some rebot command for sealos"
+description: "Add some robot command for sealos"
 author: "cuisongliu"
 inputs:
   version:
-    description: 'version of gh-rebot'
+    description: 'version of gh-robot'
     required: true
     default: 'v0.0.5'
 runs:
   using: "composite"
   steps:
   - run: |
-      sudo wget -q https://github.com/labring/gh-rebot/releases/download/${GH_REBOT_VERSION}/gh-rebot_${GH_REBOT_VERSION#v}_linux_amd64.tar.gz
-      sudo tar -zxf gh-rebot_${GH_REBOT_VERSION#v}_linux_amd64.tar.gz gh-rebot &&  chmod +x gh-rebot && sudo mv gh-rebot /usr/bin/gh-rebot
-      gh-rebot version
-      sudo rm -rf gh-rebot_${GH_REBOT_VERSION#v}_linux_amd64.tar.gz
-      gh-rebot action
+      sudo wget -q https://github.com/labring/gh-robot/releases/download/${GH_REBOT_VERSION}/gh-robot_${GH_REBOT_VERSION#v}_linux_amd64.tar.gz
+      sudo tar -zxf gh-robot_${GH_REBOT_VERSION#v}_linux_amd64.tar.gz gh-robot &&  chmod +x gh-robot && sudo mv gh-robot /usr/bin/gh-robot
+      gh-robot version
+      sudo rm -rf gh-robot_${GH_REBOT_VERSION#v}_linux_amd64.tar.gz
+      gh-robot action
     shell: bash
     env:
       GH_REBOT_VERSION: ${{ inputs.version }}

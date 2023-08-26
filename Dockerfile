@@ -6,9 +6,9 @@ MAINTAINER "Sealos Inc."
 
 RUN apk --no-cache add jq bash curl git git-lfs github-cli
 
-COPY gh-rebot /usr/bin/
+COPY gh-robot /usr/bin/
 
 
-ENTRYPOINT ["/usr/bin/gh-rebot"]
+ENTRYPOINT ["/usr/bin/gh-robot"]
 
 CMD ["--help"]

@@ -19,7 +19,7 @@ package github_go
 import (
 	"context"
 	"github.com/google/go-github/v39/github"
-	"github.com/labring/gh-rebot/pkg/types"
+	"github.com/labring/gh-robot/pkg/types"
 	"golang.org/x/oauth2"
 )
 
