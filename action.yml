@@ -5,7 +5,7 @@ inputs:
   version:
     description: 'version of robot'
     required: true
-    default: 'v1.0.0'
+    default: 'v2.0.0'
 runs:
   using: "composite"
   steps:
