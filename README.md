@@ -106,7 +106,7 @@ message:
 - name: Gh Rebot for Sealos
   uses: labring/robot@v0.0.6-rc6
   with:
-    version: v0.0.6-rc6
+    version: v2.0.0
   env:
     SEALOS_TYPE: "/comment"
     GH_TOKEN: "${{ secrets.GH_PAT }}"
@@ -114,8 +114,6 @@ message:
 **版本支持**: 
 
 - [x] 支持release
-  > 目标分支为`release-v1.2`，如果没有则默认为`main`分支,该功能v0.0.7-rc1支持
-  
   `SEALOS_TYPE: "/comment"` # 评论触发
   example:
   ```markdown
@@ -124,7 +122,6 @@ message:
   ```
   
 - [x] 支持文本替换回复
-  > 该功能v0.0.8-rc2 支持 (升级后新增了，SEALOS_COMMENT、SEALOS_ISREPLY)
   - `SEALOS_TYPE: "issue_comment"` # PR文本替换回复
   - `SEALOS_FILENAME: "README.md"` # PR文本替换回复文件位置
   - `SEALOS_COMMENT: "/xxxx"` # comment的内容
@@ -132,8 +129,6 @@ message:
   - `SEALOS_ISREPLY: "true"` # 是否回复，根据当前的comment的内容追加
 
 - [x] issue自动创建
-  > 该功能v0.0.8-rc1支持
-
   入参:
 
   - `SEALOS_TYPE: "issue_renew"` # issue自动创建，支持回复comment
