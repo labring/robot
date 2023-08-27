@@ -104,7 +104,7 @@ message:
 
 ```yaml
 - name: Gh Rebot for Sealos
-  uses: labring/robot@v0.0.6-rc6
+  uses: labring/robot@v2.0.0
   with:
     version: v2.0.0
   env:
